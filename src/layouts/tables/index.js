@@ -64,7 +64,7 @@ function Tables() {
                 coloredShadow="info"
               >
                 <MDTypography variant="h6" color="white">
-                  Authors Table
+                  جدول نویسندگان
                 </MDTypography>
               </MDBox>
               <MDBox pt={3}>
@@ -91,7 +91,7 @@ function Tables() {
                 coloredShadow="info"
               >
                 <MDTypography variant="h6" color="white">
-                  Projects Table
+                  جدول پروژه ها
                 </MDTypography>
               </MDBox>
               <MDBox pt={3}>

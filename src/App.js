@@ -28,11 +28,9 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Sidenav from "examples/Sidenav";
 
 // Material Dashboard 2 React themes
-import theme from "assets/theme";
 import themeRTL from "assets/theme/theme-rtl";
 
 // Material Dashboard 2 React Dark Mode themes
-import themeDark from "assets/theme-dark";
 import themeDarkRTL from "assets/theme-dark/theme-rtl";
 
 // RTL plugins
@@ -117,7 +115,7 @@ export default function App() {
       return null;
     });
 
-  return direction === "rtl" ? (
+  return (
     <CacheProvider value={rtlCache}>
       <ThemeProvider theme={darkMode ? themeDarkRTL : themeRTL}>
         <CssBaseline />
@@ -137,23 +135,5 @@ export default function App() {
         </Routes>
       </ThemeProvider>
     </CacheProvider>
-  ) : (
-    <ThemeProvider theme={darkMode ? themeDark : theme}>
-      <CssBaseline />
-      {layout === "dashboard" && (
-        <Sidenav
-          color={sidenavColor}
-          brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
-          brandName="Material Dashboard 2"
-          routes={routes}
-          onMouseEnter={handleOnMouseEnter}
-          onMouseLeave={handleOnMouseLeave}
-        />
-      )}
-      <Routes>
-        {getRoutes(routes)}
-        <Route path="*" element={<Navigate to="/dashboard" />} />
-      </Routes>
-    </ThemeProvider>
   );
 }

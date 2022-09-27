@@ -21,7 +21,7 @@ import Icon from "@mui/material/Icon";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
-// Material Dashboard 2 React example components
+// Material Dashboard 2 React exصبحple components
 import TimelineItem from "examples/Timeline/TimelineItem";
 
 function OrdersOverview() {
@@ -29,7 +29,7 @@ function OrdersOverview() {
     <Card sx={{ height: "100%" }}>
       <MDBox pt={3} px={3}>
         <MDTypography variant="h6" fontWeight="medium">
-          Orders overview
+          نمای کلی سفارشات
         </MDTypography>
         <MDBox mt={0} mb={2}>
           <MDTypography variant="button" color="text" fontWeight="regular">
@@ -40,7 +40,7 @@ function OrdersOverview() {
             <MDTypography variant="button" color="text" fontWeight="medium">
               24%
             </MDTypography>{" "}
-            this month
+            این ماه
           </MDTypography>
         </MDBox>
       </MDBox>
@@ -48,32 +48,32 @@ function OrdersOverview() {
         <TimelineItem
           color="success"
           icon="notifications"
-          title="$2400, Design changes"
-          dateTime="22 DEC 7:20 PM"
+          title="$2400, تغییرات دیزاین"
+          dateTime="22 اسفند 7:20 بعد از ظهر"
         />
         <TimelineItem
           color="error"
           icon="inventory_2"
-          title="New order #1832412"
-          dateTime="21 DEC 11 PM"
+          title="سفارش جدید #1832412"
+          dateTime="21 اسفند 11 بعد از ظهر"
         />
         <TimelineItem
           color="info"
           icon="shopping_cart"
-          title="Server payments for April"
-          dateTime="21 DEC 9:34 PM"
+          title="پرداخت های سرور برای ماه اردیبهشت"
+          dateTime="21 اسفند 9:34 بعد از ظهر"
         />
         <TimelineItem
           color="warning"
           icon="payment"
-          title="New card added for order #4395133"
-          dateTime="20 DEC 2:20 AM"
+          title="کارت اضافه شده برای سفارش #4395133"
+          dateTime="20 اسفند 2:20 صبح"
         />
         <TimelineItem
           color="primary"
           icon="vpn_key"
-          title="New card added for order #4395133"
-          dateTime="18 DEC 4:54 AM"
+          title="کارت اضافه شده برای سفارش #4395133"
+          dateTime="18 اسفند 4:54 صبح"
           lastItem
         />
       </MDBox>

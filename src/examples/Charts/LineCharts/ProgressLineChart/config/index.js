@@ -67,7 +67,7 @@ function configs(color, labels, label, data) {
             font: {
               size: 14,
               weight: 300,
-              family: "Roboto",
+              family: "Vazirmatn",
               style: "normal",
               lineHeight: 2,
             },
@@ -89,7 +89,7 @@ function configs(color, labels, label, data) {
             font: {
               size: 14,
               weight: 300,
-              family: "Roboto",
+              family: "Vazirmatn",
               style: "normal",
               lineHeight: 2,
             },

@@ -48,7 +48,7 @@ function configs(labels, datasets) {
             font: {
               size: 14,
               weight: 300,
-              family: "Roboto",
+              family: "Vazirmatn",
               style: "normal",
               lineHeight: 2,
             },
@@ -70,7 +70,7 @@ function configs(labels, datasets) {
             font: {
               size: 14,
               weight: 300,
-              family: "Roboto",
+              family: "Vazirmatn",
               style: "normal",
               lineHeight: 2,
             },
