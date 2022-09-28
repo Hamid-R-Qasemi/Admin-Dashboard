@@ -25,6 +25,7 @@ import MDTypography from "components/MDTypography";
 import MDAlert from "components/MDAlert";
 import MDButton from "components/MDButton";
 import MDSnackbar from "components/MDSnackbar";
+import MDModal from "components/MDModal";
 
 // Material Dashboard 2 React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
@@ -35,6 +36,7 @@ function Notifications() {
   const [infoSB, setInfoSB] = useState(false);
   const [warningSB, setWarningSB] = useState(false);
   const [errorSB, setErrorSB] = useState(false);
+  const [modalSB, setModalSB] = useState("fadeOut");
 
   const openSuccessSB = () => setSuccessSB(true);
   const closeSuccessSB = () => setSuccessSB(false);
@@ -44,6 +46,7 @@ function Notifications() {
   const closeWarningSB = () => setWarningSB(false);
   const openErrorSB = () => setErrorSB(true);
   const closeErrorSB = () => setErrorSB(false);
+  const openModalSB = () => setModalSB("mount");
 
   const alertContent = (name) => (
     <MDTypography variant="body2" color="white">
@@ -186,8 +189,38 @@ function Notifications() {
               </MDBox>
             </Card>
           </Grid>
+
+          <Grid item xs={12} lg={8}>
+            <Card>
+              <MDBox p={2}>
+                <MDTypography variant="h5">Modal Window</MDTypography>
+                <MDTypography variant="button" color="text" fontWeight="regular">
+                  Modal windows are for confirming an action on page.
+                </MDTypography>
+              </MDBox>
+              <MDBox p={2}>
+                <Grid container spacing={5}>
+                  <Grid item xs={12}>
+                    <MDButton variant="gradient" color="info" onClick={openModalSB}>
+                      Open Modal Window
+                    </MDButton>
+                  </Grid>
+                </Grid>
+              </MDBox>
+            </Card>
+          </Grid>
         </Grid>
       </MDBox>
+      <MDModal
+        title="آیا مطمئن هستید؟"
+        color="light"
+        state={modalSB}
+        setState={() => {
+          setModalSB("fadeOut");
+        }}
+      >
+        این آیتم حذف خواهد شد. آیا مطمئن هستید؟
+      </MDModal>
     </DashboardLayout>
   );
 }
