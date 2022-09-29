@@ -16,7 +16,7 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Icon from "@mui/material/Icon";
+// import Icon from "@mui/material/Icon";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
@@ -31,8 +31,23 @@ import logoAtlassian from "assets/images/small-logos/logo-atlassian.svg";
 import logoSlack from "assets/images/small-logos/logo-slack.svg";
 import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
 import logoInvesion from "assets/images/small-logos/logo-invision.svg";
+import MDMenu from "components/MDMenu";
+import { useState, useRef } from "react";
+import { Icon } from "@mui/material";
 
 export default function data() {
+  const [openMore, setOpenMore] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(false);
+  const moreMenu1 = useRef();
+  const moreMenu2 = useRef();
+  const moreMenu3 = useRef();
+  const moreMenu4 = useRef();
+  const moreMenu5 = useRef();
+  const moreMenu6 = useRef();
+  const handleOpenMore = (event) => {
+    setAnchorEl(event.target);
+    setOpenMore(!openMore);
+  };
   const Project = ({ image, name }) => (
     <MDBox display="flex" alignItems="center" lineHeight={1}>
       <MDAvatar src={image} name={name} size="sm" variant="rounded" />
@@ -77,8 +92,18 @@ export default function data() {
         ),
         completion: <Progress color="info" value={60} />,
         action: (
-          <MDTypography component="a" href="#" color="text">
-            <Icon>more_vert</Icon>
+          <MDTypography
+            id="1"
+            component="a"
+            color="text"
+            position="relative"
+            onClick={handleOpenMore}
+          >
+            <Icon ref={moreMenu1} height="100%">
+              more_vert
+            </Icon>
+
+            <MDMenu open={openMore} anchorEl={anchorEl} parentNode={moreMenu1} />
           </MDTypography>
         ),
       },
@@ -96,8 +121,18 @@ export default function data() {
         ),
         completion: <Progress color="success" value={100} />,
         action: (
-          <MDTypography component="a" href="#" color="text">
-            <Icon>more_vert</Icon>
+          <MDTypography
+            id="2"
+            component="a"
+            color="text"
+            position="relative"
+            onClick={handleOpenMore}
+          >
+            <Icon ref={moreMenu2} height="100%">
+              more_vert
+            </Icon>
+
+            <MDMenu open={openMore} anchorEl={anchorEl} parentNode={moreMenu2} />
           </MDTypography>
         ),
       },
@@ -115,8 +150,18 @@ export default function data() {
         ),
         completion: <Progress color="error" value={30} />,
         action: (
-          <MDTypography component="a" href="#" color="text">
-            <Icon>more_vert</Icon>
+          <MDTypography
+            id="3"
+            component="a"
+            color="text"
+            position="relative"
+            onClick={handleOpenMore}
+          >
+            <Icon ref={moreMenu3} height="100%">
+              more_vert
+            </Icon>
+
+            <MDMenu open={openMore} anchorEl={anchorEl} parentNode={moreMenu3} />
           </MDTypography>
         ),
       },
@@ -134,8 +179,18 @@ export default function data() {
         ),
         completion: <Progress color="info" value={80} />,
         action: (
-          <MDTypography component="a" href="#" color="text">
-            <Icon>more_vert</Icon>
+          <MDTypography
+            id="4"
+            component="a"
+            color="text"
+            position="relative"
+            onClick={handleOpenMore}
+          >
+            <Icon ref={moreMenu4} height="100%">
+              more_vert
+            </Icon>
+
+            <MDMenu open={openMore} anchorEl={anchorEl} parentNode={moreMenu4} />
           </MDTypography>
         ),
       },
@@ -153,8 +208,18 @@ export default function data() {
         ),
         completion: <Progress color="error" value={0} />,
         action: (
-          <MDTypography component="a" href="#" color="text">
-            <Icon>more_vert</Icon>
+          <MDTypography
+            id="5"
+            component="a"
+            color="text"
+            position="relative"
+            onClick={handleOpenMore}
+          >
+            <Icon ref={moreMenu5} height="100%">
+              more_vert
+            </Icon>
+
+            <MDMenu open={openMore} anchorEl={anchorEl} parentNode={moreMenu5} />
           </MDTypography>
         ),
       },
@@ -172,8 +237,15 @@ export default function data() {
         ),
         completion: <Progress color="success" value={100} />,
         action: (
-          <MDTypography component="a" href="#" color="text">
-            <Icon>more_vert</Icon>
+          <MDTypography
+            id="6"
+            component="a"
+            color="text"
+            position="relative"
+            onClick={handleOpenMore}
+          >
+            <Icon ref={moreMenu6}>more_vert</Icon>
+            <MDMenu open={openMore} anchorEl={anchorEl} parentNode={moreMenu6} />
           </MDTypography>
         ),
       },

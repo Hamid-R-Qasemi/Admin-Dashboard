@@ -25,6 +25,8 @@ import MDBadge from "components/MDBadge";
 import team2 from "assets/images/team-2.jpg";
 import team3 from "assets/images/team-3.jpg";
 import team4 from "assets/images/team-4.jpg";
+import { Grid, Icon } from "@mui/material";
+import MDButton from "components/MDButton";
 
 export default function data() {
   const Author = ({ image, name, email }) => (
@@ -72,9 +74,23 @@ export default function data() {
           </MDTypography>
         ),
         action: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
-          </MDTypography>
+          <Grid container>
+            <Grid item>
+              <MDButton>
+                <Icon color="error">delete</Icon>
+              </MDButton>
+            </Grid>
+            <Grid item>
+              <MDButton>
+                <Icon>edit</Icon>
+              </MDButton>
+            </Grid>
+            <Grid item>
+              <MDButton>
+                <Icon color="info">visibility</Icon>
+              </MDButton>
+            </Grid>
+          </Grid>
         ),
       },
       {
@@ -91,9 +107,23 @@ export default function data() {
           </MDTypography>
         ),
         action: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
-          </MDTypography>
+          <Grid container>
+            <Grid item>
+              <MDButton>
+                <Icon color="error">delete</Icon>
+              </MDButton>
+            </Grid>
+            <Grid item>
+              <MDButton>
+                <Icon>edit</Icon>
+              </MDButton>
+            </Grid>
+            <Grid item>
+              <MDButton>
+                <Icon color="info">visibility</Icon>
+              </MDButton>
+            </Grid>
+          </Grid>
         ),
       },
       {
@@ -110,9 +140,23 @@ export default function data() {
           </MDTypography>
         ),
         action: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
-          </MDTypography>
+          <Grid container>
+            <Grid item>
+              <MDButton>
+                <Icon color="error">delete</Icon>
+              </MDButton>
+            </Grid>
+            <Grid item>
+              <MDButton>
+                <Icon>edit</Icon>
+              </MDButton>
+            </Grid>
+            <Grid item>
+              <MDButton>
+                <Icon color="info">visibility</Icon>
+              </MDButton>
+            </Grid>
+          </Grid>
         ),
       },
       {
@@ -129,9 +173,23 @@ export default function data() {
           </MDTypography>
         ),
         action: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
-          </MDTypography>
+          <Grid container>
+            <Grid item>
+              <MDButton>
+                <Icon color="error">delete</Icon>
+              </MDButton>
+            </Grid>
+            <Grid item>
+              <MDButton>
+                <Icon>edit</Icon>
+              </MDButton>
+            </Grid>
+            <Grid item>
+              <MDButton>
+                <Icon color="info">visibility</Icon>
+              </MDButton>
+            </Grid>
+          </Grid>
         ),
       },
       {
@@ -148,9 +206,23 @@ export default function data() {
           </MDTypography>
         ),
         action: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
-          </MDTypography>
+          <Grid container>
+            <Grid item>
+              <MDButton>
+                <Icon color="error">delete</Icon>
+              </MDButton>
+            </Grid>
+            <Grid item>
+              <MDButton>
+                <Icon>edit</Icon>
+              </MDButton>
+            </Grid>
+            <Grid item>
+              <MDButton>
+                <Icon color="info">visibility</Icon>
+              </MDButton>
+            </Grid>
+          </Grid>
         ),
       },
       {
@@ -167,9 +239,23 @@ export default function data() {
           </MDTypography>
         ),
         action: (
-          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
-            Edit
-          </MDTypography>
+          <Grid container>
+            <Grid item>
+              <MDButton>
+                <Icon color="error">delete</Icon>
+              </MDButton>
+            </Grid>
+            <Grid item>
+              <MDButton>
+                <Icon>edit</Icon>
+              </MDButton>
+            </Grid>
+            <Grid item>
+              <MDButton>
+                <Icon color="info">visibility</Icon>
+              </MDButton>
+            </Grid>
+          </Grid>
         ),
       },
     ],

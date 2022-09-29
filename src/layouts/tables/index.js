@@ -42,8 +42,6 @@ function Tables() {
 
   useEffect(() => {
     setDirection(dispatch, "rtl");
-
-    return () => setDirection(dispatch, "ltr");
   }, []);
 
   return (

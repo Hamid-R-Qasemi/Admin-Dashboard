@@ -16,7 +16,6 @@ Coded by www.creative-tim.com
 import { useState, useEffect } from "react";
 
 // react-router components
-import { Link } from "react-router-dom";
 
 // prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
@@ -27,8 +26,6 @@ import Icon from "@mui/material/Icon";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
-import MDButton from "components/MDButton";
 
 // Material Dashboard 2 React example components
 import DefaultNavbarLink from "examples/Navbars/DefaultNavbar/DefaultNavbarLink";
@@ -40,7 +37,7 @@ import breakpoints from "assets/theme/base/breakpoints";
 // Material Dashboard 2 React context
 import { useMaterialUIController } from "context";
 
-function DefaultNavbar({ transparent, light, action }) {
+function DefaultNavbar({ transparent, light }) {
   const [controller] = useMaterialUIController();
   const { darkMode } = controller;
 
@@ -87,7 +84,7 @@ function DefaultNavbar({ transparent, light, action }) {
         shadow={transparent ? "none" : "md"}
         color={light ? "white" : "dark"}
         display="flex"
-        justifyContent="space-between"
+        justifyContent="center"
         alignItems="center"
         position="absolute"
         left={0}
@@ -102,17 +99,6 @@ function DefaultNavbar({ transparent, light, action }) {
           backdropFilter: transparent ? "none" : `saturate(200%) blur(30px)`,
         })}
       >
-        <MDBox
-          component={Link}
-          to="/"
-          py={transparent ? 1.5 : 0.75}
-          lineHeight={1}
-          pl={{ xs: 0, lg: 1 }}
-        >
-          <MDTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
-            Material Dashboard 2
-          </MDTypography>
-        </MDBox>
         <MDBox color="inherit" display={{ xs: "none", lg: "flex" }} m={0} p={0}>
           <DefaultNavbarLink icon="donut_large" name="داشبورد" route="/dashboard" light={light} />
           <DefaultNavbarLink icon="person" name="پروفایل" route="/profile" light={light} />
@@ -124,35 +110,7 @@ function DefaultNavbar({ transparent, light, action }) {
           />
           <DefaultNavbarLink icon="key" name="ورود" route="/authentication/sign-in" light={light} />
         </MDBox>
-        {action &&
-          (action.type === "internal" ? (
-            <MDBox display={{ xs: "none", lg: "inline-block" }}>
-              <MDButton
-                component={Link}
-                to={action.route}
-                variant="gradient"
-                color={action.color ? action.color : "info"}
-                size="small"
-              >
-                {action.label}
-              </MDButton>
-            </MDBox>
-          ) : (
-            <MDBox display={{ xs: "none", lg: "inline-block" }}>
-              <MDButton
-                component="a"
-                href={action.route}
-                target="_blank"
-                rel="noreferrer"
-                variant="gradient"
-                color={action.color ? action.color : "info"}
-                size="small"
-                sx={{ mt: -0.3 }}
-              >
-                {action.label}
-              </MDButton>
-            </MDBox>
-          ))}
+
         <MDBox
           display={{ xs: "inline-block", lg: "none" }}
           lineHeight={0}
@@ -174,31 +132,12 @@ function DefaultNavbar({ transparent, light, action }) {
 DefaultNavbar.defaultProps = {
   transparent: false,
   light: false,
-  action: false,
 };
 
 // Typechecking props for the DefaultNavbar
 DefaultNavbar.propTypes = {
   transparent: PropTypes.bool,
   light: PropTypes.bool,
-  action: PropTypes.oneOfType([
-    PropTypes.bool,
-    PropTypes.shape({
-      type: PropTypes.oneOf(["external", "internal"]).isRequired,
-      route: PropTypes.string.isRequired,
-      color: PropTypes.oneOf([
-        "primary",
-        "secondary",
-        "info",
-        "success",
-        "warning",
-        "error",
-        "dark",
-        "light",
-      ]),
-      label: PropTypes.string.isRequired,
-    }),
-  ]),
 };
 
 export default DefaultNavbar;

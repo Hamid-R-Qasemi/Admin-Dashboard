@@ -35,14 +35,13 @@ function BasicLayout({ image, children }) {
         action={{
           type: "external",
           route: "https://creative-tim.com/product/material-dashboard-react",
-          label: "free download",
           color: "dark",
         }}
       />
       <MDBox
         position="absolute"
         width="100%"
-        minHeight="100vh"
+        minHeight="101vh"
         sx={{
           backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
             image &&
@@ -55,7 +54,7 @@ function BasicLayout({ image, children }) {
           backgroundRepeat: "no-repeat",
         }}
       />
-      <MDBox px={1} width="100%" height="100vh" mx="auto">
+      <MDBox px={1} width="100%" height="100vh" mx="auto" overflow="hidden">
         <Grid container spacing={1} justifyContent="center" alignItems="center" height="100%">
           <Grid item xs={11} sm={9} md={5} lg={4} xl={3}>
             {children}
